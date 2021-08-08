@@ -15007,7 +15007,7 @@ body {
 
 /* line 17, src/assets/scss/pages/_home.scss */
 .character {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 100px;
   width: 440px;
   left: 50%;
