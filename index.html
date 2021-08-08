@@ -48,12 +48,13 @@
     <div class="content-page">
         
       <div class="content" style="overflow-x: hidden;">
-        <nav class="navbar navbar-expand-lg  position-relative ">
+        <nav id="mainNav" class="navbar navbar-expand-lg  position-relative">
             <a class="navbar-brand" href="#"><img width="70" class="d-block mr-3" src="assets/img/babythundercake.png"
                     alt="Babythundercake"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <i class="fas fa-bars" style="color: #24170e;"></i>
             </button>
         
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -426,3 +427,27 @@
 
 <!-- Mirrored from www.Babythundercake.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Aug 2021 07:29:40 GMT -->
 </html>
+<script>
+var lastScrollTop = 0;
+var scrollableElement = document.body; //document.getElementById('scrollableElement');
+var element = document.getElementById("mainNav");
+
+scrollableElement.addEventListener('wheel', checkScrollDirection);
+
+function checkScrollDirection(event) {
+  if (checkScrollDirectionIsUp(event)) {
+    element.classList.add("nav-up");
+    element.classList.remove("nav-down");
+  } else {
+    element.classList.add("nav-down");
+    element.classList.remove("nav-up");
+  }
+}
+
+function checkScrollDirectionIsUp(event) {
+  if (event.wheelDelta) {
+    return event.wheelDelta > 0;
+  }
+  return event.deltaY < 0;
+}
+</script>
