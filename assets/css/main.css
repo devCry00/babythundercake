@@ -564,7 +564,10 @@ body {
   line-height: 1.5;
   color: black;
   text-align: left;
-  background-color: #F7D458;
+  background-image: url(../img/SVG/background.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #fff2f9;
 }
 
 /* line 66, node_modules/bootstrap/scss/_reboot.scss */
@@ -14898,11 +14901,6 @@ a {
   text-decoration: none;
 }
 
-/* line 33, src/assets/scss/base/_base.scss */
-body {
-  background-image: url(../img/SVG/background.svg);
-}
-
 /* line 1, src/assets/scss/base/_typography.scss */
 .letter-space {
   letter-spacing: 1px;
@@ -15026,5 +15024,30 @@ body {
     margin-left: -100px;
   }
 }
+
+@media (max-width: 425px) {
+  #mainNav > div > a {
+    font-size: 10px;
+  }
+}
+
+#mainNav {
+  transition: .7s !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #e2bebeb0;
+  z-index: 999;
+}
+
+.nav-up {
+  transform: translate(0, 0) !important;
+}
+
+.nav-down {
+  transform: translate(0, -100%) !important;
+}
+
 
 /*# sourceMappingURL=../../../scss */
