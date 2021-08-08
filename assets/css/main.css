@@ -14900,9 +14900,7 @@ a {
 
 /* line 33, src/assets/scss/base/_base.scss */
 body {
-  background-image: url(../img/SVG/BG1.svg);
-  background-size: 80px;
-  background-repeat: repeat;
+  background-image: url(../img/SVG/background.svg);
 }
 
 /* line 1, src/assets/scss/base/_typography.scss */
@@ -15011,7 +15009,7 @@ body {
 .character {
   position: absolute;
   bottom: 100px;
-  width: 400px;
+  width: 440px;
   left: 50%;
   margin-left: -200px;
   -webkit-transform: translatey(0px);
