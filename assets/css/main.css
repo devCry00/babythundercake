@@ -568,6 +568,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #fff2f9;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* line 66, node_modules/bootstrap/scss/_reboot.scss */
