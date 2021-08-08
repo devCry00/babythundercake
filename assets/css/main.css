@@ -4111,6 +4111,7 @@ fieldset:disabled a.btn {
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
 .btn-primary {
   color: #fff;
+  font-size: 13px;
   background: #d08750 -webkit-gradient(linear, left top, left bottom, from(#d08750), to(#815C3C)) repeat-x;
   /*background: #815C3C linear-gradient(180deg, #936e40, #815C3C) repeat-x;*/
   border-color: #815C3C;
