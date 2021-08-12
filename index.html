@@ -32,9 +32,11 @@
     gtag('js', new Date());         
     gtag('config', 'G-9NDBLG6KTE');
   </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
-  <main class="wrapper" role="main">
+  <main id="app" class="wrapper" role="main">
       <div class="content-page">
         <div class="content" style="overflow-x: hidden;">
             <nav id="mainNav" class="navbar navbar-expand-lg  position-relative">
@@ -391,22 +393,10 @@
       </div>
   </main>
     <!-- Twitter universal website tag code -->
-  <script>
-      !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-      },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='../static.ads-twitter.com/uwt.js',
-      a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-      // Insert Twitter Pixel ID and Standard Event data below
-      twq('init','o6i0n');
-      twq('track','PageView');
-  </script>
     <!-- End Twitter universal website tag code -->
 </body>
   <!-- build:js -->
   <script src="assets/vendor/js/jquery.js"></script>
-  <script type="text/javascript" src="../cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"></script>
-  <script type="text/javascript" src="../cdn.datatables.net/fixedcolumns/3.3.3/js/dataTables.fixedColumns.min.js"></script>
-  <link href="../cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle%403.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
-  <script src="../cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle%403.6.1/js/bootstrap4-toggle.min.js"></script>
   <script src="assets/vendor/js/popper.js"></script>
   <script src="assets/vendor/js/bootstrap.js"></script>
   <script src="assets/js/util/autoPadding.js"></script>
@@ -416,26 +406,40 @@
   <!-- Mirrored from www.Babythundercake.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Aug 2021 07:29:40 GMT -->
 </html>
 <script>
-   var lastScrollTop = 0;
-   var scrollableElement = document.body; //document.getElementById('scrollableElement');
-   var element = document.getElementById("mainNav");
-   
-   scrollableElement.addEventListener('wheel', checkScrollDirection);
-   
-   function checkScrollDirection(event) {
-     if (checkScrollDirectionIsUp(event)) {
-       element.classList.add("nav-up");
-       element.classList.remove("nav-down");
-     } else {
-       element.classList.add("nav-down");
-       element.classList.remove("nav-up");
-     }
-   }
-   
-   function checkScrollDirectionIsUp(event) {
-     if (event.wheelDelta) {
-       return event.wheelDelta > 0;
-     }
-     return event.deltaY < 0;
-   }
+  var vm = new Vue({
+  el: '#app',
+  data: {
+    qrcode: '',
+    imageQueryString: '/storage/uploads/individuals/826/vaccination/vaccination.jpg',
+  },
+  created() {
+  },
+  methods: {
+    eut() {
+      console.log(1)
+    }
+  }
+})
+var lastScrollTop = 0;
+var scrollableElement = document.body; //document.getElementById('scrollableElement');
+var element = document.getElementById("mainNav");
+
+scrollableElement.addEventListener('wheel', checkScrollDirection);
+
+function checkScrollDirection(event) {
+ if (checkScrollDirectionIsUp(event)) {
+   element.classList.add("nav-up");
+   element.classList.remove("nav-down");
+ } else {
+   element.classList.add("nav-down");
+   element.classList.remove("nav-up");
+ }
+}
+
+function checkScrollDirectionIsUp(event) {
+ if (event.wheelDelta) {
+   return event.wheelDelta > 0;
+ }
+ return event.deltaY < 0;
+}
 </script>
