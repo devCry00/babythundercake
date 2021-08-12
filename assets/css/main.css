@@ -15079,6 +15079,10 @@ a {
   color: #d08750 !Important;
 }
 
+.text-white {
+  color: #fff;
+}
+
 .khaki-text.link:hover {
   color: #3f1592 !important;
 }
@@ -15132,7 +15136,7 @@ a {
   float: left;
 }
 
-.preview-section > div {
+.preview-section > div, .dashboard-section > div {
   justify-content: center;
   /*margin: 4rem;*/
 }
@@ -15151,5 +15155,67 @@ a {
 .preview-image {
   height: 30rem;
 }
+
+html#dashboard, html#dashboard body, html#dashboard body main, html#dashboard body main, html#dashboard body main > div {
+  /*border:  solid red;*/
+  height: -webkit-fill-available;
+}
+
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.dashboard-section > div > div {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+}
+
+.dashboard-section > div.rewards {
+  width: -webkit-fill-available;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border-radius: 15px;
+  padding: 4%;
+  margin: 1%;
+}
+
+#check-btn {
+  -webkit-box-shadow: 0 0 12px 0 #a655d4;
+  box-shadow: 0 0 12px 0 #a655d4;
+  background: #a655d4;
+  margin: 5px;
+  padding: 10px 30px;
+  color: white;
+}
+
+#claim-btn {
+  -webkit-box-shadow: 0 0 12px 0 #1f87ff;
+  box-shadow: 0 0 12px 0 #1f87ff;
+  background: #1f87ff;
+  margin: 5px;
+  padding: 10px 30px;
+  color: white;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 /*# sourceMappingURL=../../../scss */

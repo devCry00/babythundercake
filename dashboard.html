@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="dashboard">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NDBLG6KTE"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@metamask/onboarding@1.0.1/dist/metamask-onboarding.cjs.min.js"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -33,7 +35,7 @@
   </script>
 </head>
 <body>
-	<main class="wrapper" role="main">
+	<main id="app" class="wrapper" role="main">
 		<nav id="mainNav" class="navbar navbar-expand-lg  position-relative">
       <a class="navbar-brand" href="#"><img width="70" class="d-block mr-3" src="assets/img/babythundercake.png"
           alt="Babythundercake"></a>
@@ -56,6 +58,10 @@
         </ul>
       </div>
       <div class="d-flex align-items-center">
+      	<button class="btn btn-primary m-1" target="_blank" href="https://pancakeswap.finance/swap?outputCurrency=0xf1496dc3054b99bfe48b6738320d45eef8513610">
+          <i class="fas fa-wallet pr-2"></i>
+          Connect wallet
+        </button>
         <a class="text-secondary m-2 mr-3 t" target="_blank" href="https://t.me/BabyThunderCake">
           <i class="khaki-text link fab fa-telegram-plane fa-2x"></i>
         </a>
@@ -64,38 +70,67 @@
         </a>
       </div>
     </nav>
-		<div class="container preview-section" style="">
-			<div class="row" style="">
-				<div class="col-12 col-md-3">
-					<img class="mr-2 preview-image" src="assets/img/preview/img1.jpg" alt="">
+		<div class="container dashboard-section" style="">
+			<marquee>
+				<h5 class="khaki-text">- - THIS PAGE IS UNDER DEVELOPMENT - -</h5>
+			</marquee>
+			<div class="rewards">
+				<div>
+					<div class="token-details text-center text-white">
+	          <h6 style="text-align: initial !important; ">
+	          	<small>
+	          		Selected Network:
+	          	</small>
+	          	<small id="network-name"> Not Connected</small>
+	          </h6>
+	          <h6 style="text-align: initial !important;">
+	          	<small>
+		          	Connected Account:
+		          </small>
+	          	<small id="selected-account"> Not Connected</small>
+	          </h6>
+	          <br>
+
+	          <h4 style="">
+	          	Unclaimed Rewards:
+	          	<span id="unclaimed-rewards">&nbspN/A&nbsp</span> $BTC
+	          </h4>
+            <h4 style="">
+            	<span>Claimed Rewards: </span>
+            	<span id="claimed-rewards">&nbspN/A&nbsp</span> $BTC
+            </h4>
+            <h4 style="">
+            	<span>Total Rewards Distributed: </span>
+            	<span id="total-rewards">&nbspN/A&nbsp</span> $BTC
+            </h4>
+	      </div>
 				</div>
-				<div class="col-12 col-md-3">
-					<img class="mr-2 preview-image" src="assets/img/preview/img2.jpg" alt="">
-				</div>
-				<div class="col-12 col-md-3">
-					<img class="mr-2 preview-image" src="assets/img/preview/img3.jpg" alt="">
-				</div>
-				<div class="col-12 col-md-3">
-					<img class="mr-2 preview-image" src="assets/img/preview/img4.jpg" alt="">
-				</div>
-				<div class="col-12 col-md-3">
-					<img class="mr-2 preview-image" src="assets/img/preview/img5.jpg" alt="">
-				</div>
-				<div class="col-12 col-md-3">
-					<img class="mr-2 preview-image" src="assets/img/preview/img6.jpg" alt="">
-				</div>
-				<div class="col-12 col-md-3">
-					<img class="mr-2 preview-image" src="assets/img/preview/img7.jpg" alt="">
-				</div>
-				<div class="col-12 col-md-3">
-					<img class="mr-2 preview-image" src="assets/img/preview/img9.jpg" alt="">
-				</div>
-			</div>
+		</div>
+		<div>
+			<button id="check-btn" class="btn btn-lg mb-2 btn-glow btn-gradient-blue">
+				<h5 style="margin: 0">Check Rewards</h5>
+	    </button>
+	    <button id="claim-btn" class="btn btn-lg mb-2 btn-glow btn-gradient-blue">
+	    	<h5 style="margin: 0">Claim Rewards</h5>
+	    </button>
 		</div>
 	</main>
 </body>
 </html>
 <script>
+var vm = new Vue({
+  el: '#app',
+  data: {
+    text: 'asasdasdasdasd',
+  },
+  created() {
+  },
+  methods: {
+    eut() {
+      console.log(1)
+    }
+  }
+})
 var lastScrollTop = 0;
 var scrollableElement = document.body; //document.getElementById('scrollableElement');
 var element = document.getElementById("mainNav");
